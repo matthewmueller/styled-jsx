@@ -218,7 +218,7 @@ export const visitor = {
       )
 
       // When using the `resolve` helper we need to add an import
-      // for the _JSXStyle component `styled-jsx-preact/style`
+      // for the _JSXStyle component `styled-jsx-preact3/style`
       if (
         hasJSXStyle &&
         taggedTemplateExpressions.resolve.length > 0 &&
