@@ -1,8 +1,8 @@
 {
-  "name": "styled-jsx",
+  "name": "preact-styled-jsx",
   "version": "3.0.2",
   "license": "MIT",
-  "repository": "zeit/styled-jsx",
+  "repository": "matthewmueller/styled-jsx",
   "description": "Full CSS support for JSX without compromises",
   "files": [
     "dist",
