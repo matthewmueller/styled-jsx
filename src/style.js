@@ -1,4 +1,4 @@
-import { Component } from 'react'
+import { Component } from 'preact'
 import StyleSheetRegistry from './stylesheet-registry'
 
 const styleSheetRegistry = new StyleSheetRegistry()

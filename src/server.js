@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'preact'
 import { flush } from './style'
 
 export default function flushToReact() {

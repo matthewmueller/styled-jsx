@@ -1,7 +1,7 @@
 // Packages
 import test from 'ava'
-import React from 'react'
-import ReactDOM from 'react-dom/server'
+import React from 'preact'
+import ReactDOM from 'preact-render-to-string'
 
 // Ours
 import plugin from '../src/babel'
@@ -126,10 +126,8 @@ test('server rendering', t => {
     '<style id="__jsx-3">div { color: green }</style>'
 
   // Render using react
-  ReactDOM.renderToString(React.createElement(App))
-  const html = ReactDOM.renderToStaticMarkup(
-    React.createElement('head', null, flush())
-  )
+  ReactDOM.render(React.createElement(App))
+  const html = ReactDOM.render(React.createElement('head', null, flush()))
 
   t.is(html, `<head>${expected}</head>`)
 
@@ -138,7 +136,7 @@ test('server rendering', t => {
   t.is('', flushToHTML())
 
   // Render to html again
-  ReactDOM.renderToString(React.createElement(App))
+  ReactDOM.render(React.createElement(App))
   t.is(expected, flushToHTML())
 
   // Assert that memory is empty
