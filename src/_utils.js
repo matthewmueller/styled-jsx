@@ -99,7 +99,9 @@ export const isGlobalEl = el =>
 export const isStyledJsx = ({ node: el }) =>
   t.isJSXElement(el) &&
   el.openingElement.name.name === 'style' &&
-  el.openingElement.attributes.some(attr => attr.name.name === STYLE_ATTRIBUTE)
+  el.openingElement.attributes.some(
+    attr => attr.name.name === STYLE_ATTRIBUTE || attr.name.name === 'scoped'
+  )
 
 export const findStyles = path => {
   if (isStyledJsx(path)) {
