@@ -47,7 +47,10 @@ export const addClassName = (path, jsxId) => {
       )
       continue
     }
-    if (t.isJSXAttribute(attr) && node.name.name === 'className') {
+    if (
+      t.isJSXAttribute(attr) &&
+      (node.name.name === 'className' || node.name.name === 'class')
+    ) {
       className = attributes[i]
       // found className break the loop
       break
